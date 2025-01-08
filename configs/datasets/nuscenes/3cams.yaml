@@ -15,9 +15,10 @@ data:
   start_timestep: 0 # which timestep to start from
   end_timestep: -1 # which timestep to end at, -1 means the last timestep
   preload_device: cuda # choose from ["cpu", "cuda"], cache the data on this device
+  invert_rear_cams: True
   pixel_source: # image source and object annotations
     type: datasets.nuscenes.nuscenes_sourceloader.NuScenesPixelSource
-    cameras: [0, 1, 2] # which cameras to use
+    cameras: [5, 4, 3] # which cameras to use
     downscale_when_loading: [2, 2, 2] # the size of the images to load
     downscale: 1 # downscale factor wrt to the downscale_when_loading
     undistort: False # whether to undistort the images
